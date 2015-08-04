@@ -4,8 +4,8 @@ public class Nine {
 
 	}
     public static boolean isPalindrome(int x) {
-    	boolean test = true;
-    	x = Math.abs(x);
+    	if (x < 0)
+    		return false;
     	int length = String.valueOf(x).length();
     	for(int i = 0; i<length/2; i++){
     	if((int)(x/Math.pow(10, length-i-1))%10 == (int)(x / Math.pow(10, i))%10){
@@ -13,6 +13,6 @@ public class Nine {
     	else
     		return false;
     	}
-    	return test;
+    	return true;
     }
 }
